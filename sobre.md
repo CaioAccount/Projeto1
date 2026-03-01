@@ -1,4 +1,4 @@
 # ProjetoCaio1
-Projeto - Site com previsão do tempo + sugestão automática de roupa baseado no tempo
+Projeto - Site com previsão do tempo + sugestão de roupa com base no tempo
 
 Link - projetocaio1.netlify.app
