@@ -3,7 +3,6 @@ let chaveIA = "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"
 const input = document.querySelector(".input-cidade")
 const caixa = document.querySelector(".caixa-media")
 
-// ENTER pesquisa
 input.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         cliqueiNoBotao()
@@ -26,7 +25,6 @@ async function cliqueiNoBotao(){
         return
     }
 
-    // troca fundo conforme clima
     mudarFundo(
     dadosJson.weather[0].main,
     dadosJson.dt,
@@ -48,9 +46,6 @@ async function cliqueiNoBotao(){
     }, 100)
 }
 
-/* =========================
-   TROCA DE FUNDO ANIMADA
-========================= */
 
 function mudarFundo(clima, horaAtual, nascerSol, porSol){
 
@@ -59,7 +54,6 @@ function mudarFundo(clima, horaAtual, nascerSol, porSol){
 
     let imagem = ""
 
-    /* ========= DIA ========= */
 
     if(ehDia){
 
@@ -84,7 +78,6 @@ function mudarFundo(clima, horaAtual, nascerSol, porSol){
 
     }
 
-    /* ========= NOITE ========= */
 
     else{
 
@@ -105,7 +98,6 @@ function mudarFundo(clima, horaAtual, nascerSol, porSol){
         }
     }
 
-    // animação fade
     document.body.classList.add("fade-bg")
 
     setTimeout(() => {
@@ -114,9 +106,6 @@ function mudarFundo(clima, horaAtual, nascerSol, porSol){
     }, 400)
 }
 
-/* =========================
-   VOZ
-========================= */
 
 function detectaVoz(){
     let reconhecimento = new window.webkitSpeechRecognition()
@@ -129,9 +118,6 @@ function detectaVoz(){
     }
 }
 
-/* =========================
-   IA ROUPA
-========================= */
 
 async function pedirRoupa(){
 
